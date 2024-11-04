@@ -48,28 +48,3 @@ namespace AuthoringApi.Webhook.Controllers
         }
     }
 }
-
-
-//var query = @"
-//    query {
-//      search(
-//        query: {
-//          searchStatement: {
-//            criteria: [
-//              { criteriaType: SEARCH, field: ""_Name"", value: ""Home"" }
-//            ]
-//          }
-//        }
-//      )
-//     {
-//        results {
-//          innerItem {
-//            path
-//            field(name: ""Title"") {
-//              value
-//            }
-//          }
-//        }
-//      }
-//    }
-//";
