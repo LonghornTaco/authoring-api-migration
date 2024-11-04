@@ -1,0 +1,25 @@
+﻿---
+ID: "9844bca0-5fa6-48c8-b4a3-171a2be6e5c2"
+Parent: "ca9d20f7-6878-40e4-8506-2cc9a0fc9427"
+Template: "57d96b4b-185e-431c-82a6-f1acd5be1932"
+Path: /sitecore/system/Settings/Webhooks/Serialization Types/JSON
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210908T084142Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin

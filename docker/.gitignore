@@ -1,0 +1,15 @@
+!.gitkeep
+
+data/creative-exchange/**
+
+data/deploy/*/**
+data/logs/*/**
+
+data/solr/**
+
+data/sql/*.ldf
+data/sql/*.mdf
+#serialization
+startup/**
+!startup/*.ps1
+!build/**/bin

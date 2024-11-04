@@ -1,0 +1,17 @@
+﻿---
+ID: "4281b708-4100-4496-870a-a2e8c6e8a1d7"
+Parent: "38e1a773-4348-439b-91f5-567e0270ca80"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/system/Settings/Webhooks/ApiKeySources
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211013T102510Z
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin

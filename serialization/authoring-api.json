@@ -1,0 +1,38 @@
+{
+   "namespace": "AuthoringApi",
+   "items": {
+      "includes": [
+         {
+            "name": "tenant-site",
+            "path": "/sitecore/content/taco-demo",
+            "database": "master"
+         },
+         {
+            "name": "media",
+            "path": "/sitecore/media library/Project/taco-demo",
+            "database": "master",
+            "rules": [
+               {
+                  "path": "/Sitemaps",
+                  "scope": "ignored"
+               }
+            ]
+         },
+         {
+            "name": "services",
+            "path": "/sitecore/system/Settings/Services",
+            "database": "master"
+         },
+         {
+            "name": "webhooks",
+            "path": "/sitecore/system/Webhooks",
+            "database": "master"
+         },
+         {
+            "name": "webhooks-settings",
+            "path": "/sitecore/system/Settings/Webhooks",
+            "database": "master"
+         }
+      ]
+   }
+}

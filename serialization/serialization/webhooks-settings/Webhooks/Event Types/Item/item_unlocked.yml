@@ -1,0 +1,29 @@
+﻿---
+ID: "34750bc1-8a3f-4654-a47f-a0ac232f1d17"
+Parent: "e4c27400-7198-4338-b5eb-b05ce898262d"
+Template: "a08e202a-1709-4d7f-8946-3206e63bbe8b"
+Path: /sitecore/system/Settings/Webhooks/Event Types/Item/item_unlocked
+SharedFields:
+- ID: "76ebf3e6-5ae2-41ce-930e-d11081940be8"
+  Hint: Event Name
+  Value: "item:unlocked"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210916T081301Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin

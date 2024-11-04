@@ -1,0 +1,39 @@
+[
+   {
+       "name": "Sitecore.Core",
+       "scripts": [
+           "CreateUser.Core.sql",
+           "SetSitecoreAdminPassword.sql"
+       ],
+       "dacpacs": [
+           "Sitecore.Core.dacpac"
+       ]
+   },
+   {
+       "name": "Sitecore.Master",
+       "scripts": [
+           "CreateUser.Master.sql"
+       ],
+       "dacpacs": [
+           "Sitecore.Master.dacpac"
+       ]
+   },
+   {
+       "name": "Sitecore.Web",
+       "scripts": [
+           "CreateUser.Web.sql"
+       ],
+       "dacpacs": [
+           "Sitecore.Web.dacpac"
+       ]
+   },
+   {
+       "name": "Sitecore.Experienceforms",
+       "scripts": [
+           "CreateUser.ExperienceForms.sql"
+       ],
+       "dacpacs": [
+           "Sitecore.Experienceforms.dacpac"
+       ]
+   }
+]

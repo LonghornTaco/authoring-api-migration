@@ -1,0 +1,17 @@
+﻿---
+ID: "e4c27400-7198-4338-b5eb-b05ce898262d"
+Parent: "e6ac4782-17d4-4aa2-acd9-7dd49dc4e3b7"
+Template: "8e3a27c5-8f8e-4c08-bc0c-bfb12bfe0c1a"
+Path: /sitecore/system/Settings/Webhooks/Event Types/Item
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210916T080610Z
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin

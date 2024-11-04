@@ -1,0 +1,23 @@
+﻿---
+ID: "07f3ef72-5fd3-47cc-8d97-f06f5950625d"
+Parent: "91559d18-c7a4-4be6-a5f6-eb31cc82f645"
+Template: "b4be8618-2f26-45c9-80ad-6e4874f16b1e"
+Path: "/sitecore/content/taco-demo/authoring-api/Home/taco-child-page"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0efa10f5-63cb-4204-960b-538025e9757b"
+      Hint: Title
+      Value: This is a child page created by LonghornTaco
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20241101T013445Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: This is a child page created by LonghornTaco
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin

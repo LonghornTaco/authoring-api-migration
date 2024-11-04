@@ -1,0 +1,21 @@
+﻿---
+ID: "ca9d20f7-6878-40e4-8506-2cc9a0fc9427"
+Parent: "38e1a773-4348-439b-91f5-567e0270ca80"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/system/Settings/Webhooks/Serialization Types
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{57D96B4B-185E-431C-82A6-F1ACD5BE1932}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210908T084059Z
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin

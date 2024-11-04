@@ -1,0 +1,26 @@
+﻿---
+ID: "b6cfc98a-07b1-4ce1-9469-7a68d7d5c1de"
+Parent: "38e1a773-4348-439b-91f5-567e0270ca80"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/system/Settings/Webhooks/Authorizations
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {950542DA-E851-4996-A20A-89B40309F130}
+    {DFB3307F-1DA6-4726-99DF-CA3102DB5D46}
+    {19FCE74D-99A4-4272-94C3-DBB848222A06}
+    {06A09414-4E9A-42E0-B9CE-0E07ECCC870D}
+    {2013052C-0C2F-4645-B886-108C749B565F}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210906T125853Z
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin
