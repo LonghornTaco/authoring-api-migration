@@ -1,0 +1,13 @@
+{
+  "name": "authoring-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./wwwroot/sass/index.scss ./wwwroot/css/authoring-api.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+, "-vs-binding":{"ProjectOpened":["sass"]}
+}

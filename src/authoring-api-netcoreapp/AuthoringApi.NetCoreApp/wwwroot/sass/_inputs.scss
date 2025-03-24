@@ -1,0 +1,58 @@
+﻿.form-control {
+    
+}
+.input-control {
+    margin-bottom: 15px;
+    height: 38px;
+    line-height: 1.5px;
+    border-radius: 7px;
+    padding-left: 10px;
+}
+.hidden {
+    display: none;
+}
+.one-third {
+    width: 33%;
+}
+.two-thirds {
+    width: 65%;
+}
+.half {
+    width: 50%;
+}
+.full-width {
+    width: 100%;
+}
+.btn {
+    width: 150px;
+    margin-bottom: 5px;
+
+    &.one-third {
+        width: 33.3333%;
+    }
+}
+
+label {
+    margin-bottom: 15px;
+}
+
+.form-fields {
+    border: solid 1px $default-border-color;
+    background-color: $default-section-solor;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    &:first-child {
+        margin-left: 0px;
+    }
+
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+.no-margin {
+    margin-left: 0;
+    margin-right: 0;
+}

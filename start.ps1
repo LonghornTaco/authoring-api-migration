@@ -17,11 +17,11 @@ $cmUrl = Get-EnvVar -Key CM_HOST
 $cdUrl = Get-EnvVar -Key CD_HOST
 $idUrl = Get-EnvVar -Key ID_HOST
 $renderingUrl = Get-EnvVar -Key RENDERING_HOST
-$webhookUrl = Get-EnvVar -Key WEBHOOK_HOST
+$metCpreAppUrl = Get-EnvVar -Key NETCOREAPP_HOST
 
 $cliSecret = Get-EnvVar -Key CLI_IDSECRET
 
-$sanList = @($cmUrl, $cdUrl, $idUrl, $renderingUrl, $webhookUrl)
+$sanList = @($cmUrl, $cdUrl, $idUrl, $renderingUrl, $metCpreAppUrl)
 
 #----------------------------------------------------------
 ## check data folders

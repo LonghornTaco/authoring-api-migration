@@ -26,7 +26,7 @@ SharedFields:
     </ruleset>
 - ID: "f9f59338-045d-4da8-80f0-ce7f7d92e4af"
   Hint: Url
-  Value: "http://webhook/api/webhooks/updatenavigationtitle"
+  Value: "http://netcoreapp/api/webhooks/updatenavigationtitle"
 Languages:
 - Language: en
   Fields:

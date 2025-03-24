@@ -1,0 +1,143 @@
+.input-control {
+  margin-bottom: 15px;
+  height: 38px;
+  line-height: 1.5px;
+  border-radius: 7px;
+  padding-left: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.one-third {
+  width: 33%;
+}
+
+.two-thirds {
+  width: 65%;
+}
+
+.half {
+  width: 50%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.btn {
+  width: 150px;
+  margin-bottom: 5px;
+}
+.btn.one-third {
+  width: 33.3333%;
+}
+
+label {
+  margin-bottom: 15px;
+}
+
+.form-fields {
+  border: solid 1px #666666;
+  background-color: #464646;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.form-fields:first-child {
+  margin-left: 0px;
+}
+.form-fields:last-child {
+  margin-right: 0px;
+}
+
+.no-margin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+#statusMessages {
+  border: 1px solid #666666;
+  height: 800px;
+  overflow-y: auto;
+  overflow-x: auto;
+  margin-top: 24px;
+  background-color: #181818;
+  font-family: Consolas;
+}
+#statusMessages .wrapper {
+  font-size: 14px;
+}
+#statusMessages .wrapper .timestamp {
+  color: #767875;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#statusMessages .wrapper .loglevel {
+  color: #767875;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: uppercase;
+}
+#statusMessages .wrapper .message {
+  color: #9cbecb;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#statusMessages .wrapper .message.errr {
+  color: #dd4659;
+}
+#statusMessages .wrapper .message.warn {
+  color: yellow;
+}
+#statusMessages .wrapper .message.dbug {
+  color: #02859a;
+}
+
+body {
+  background-color: #1f1f1f;
+  color: #FFFFFF;
+}
+
+.nav-link {
+  color: inherit;
+}
+.nav-link:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #666666 !important;
+}
+
+.table {
+  margin-top: 20px;
+  color: inherit;
+}
+.table a {
+  color: inherit;
+}
+.table a:hover {
+  color: inherit;
+}
+
+.margin-left {
+  margin-left: 12px;
+}
+
+.margin-right {
+  margin-right: 12px;
+}
+
+.centered {
+  text-align: center;
+}
+
+/*# sourceMappingURL=authoring-api.css.map */

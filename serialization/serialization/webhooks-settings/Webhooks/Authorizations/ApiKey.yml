@@ -1,0 +1,32 @@
+﻿---
+ID: "b81b3ccf-3e39-4d01-a472-b42abcc3a1de"
+Parent: "b6cfc98a-07b1-4ce1-9469-7a68d7d5c1de"
+Template: "950542da-e851-4996-a20a-89b40309f130"
+Path: /sitecore/system/Settings/Webhooks/Authorizations/ApiKey
+SharedFields:
+- ID: "4fb04e59-b031-4190-863b-25bb0aaa0e78"
+  Hint: Value
+  Value: "701b4af4-a6d4-4ebe-9e73-902429543cea"
+- ID: "b7f95981-ade8-4ed2-b5cc-8ffc737cedfc"
+  Hint: Key
+  Value: "my-api-key"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250323T224906Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin

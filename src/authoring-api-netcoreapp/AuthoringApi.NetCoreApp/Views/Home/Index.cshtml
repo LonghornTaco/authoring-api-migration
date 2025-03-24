@@ -1,0 +1,215 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<h2>Welcome to the Authoring (& Management) API Demo!</h2>
+<br />
+
+<div class="row no-margin">
+    <div class="col form-fields">
+        <label class="full-width">Update Item</label>
+
+        <input id="updateName" type="text" class="col-8 input-control full-width" placeholder="Enter a item name" />
+
+        <select id="updateFields" class="half input-control full-width">
+            <option value="">-- Select an field --</option>
+            <option value="Title">Title</option>
+            <option value="Content">Content</option>
+            <option value="NavigationTitle">NavigationTitle</option>
+        </select>
+        <input id="updateValue" type="text" class="input-control two-thirds" placeholder="Enter a value for the field" />
+
+        <input id="updateButton" type="button" value="Update Item" class="btn btn-primary one-third" />
+    </div>
+
+    <div class="col form-fields">
+        <label class="full-width">Create Item</label>
+        <input id="createName" type="text" class="input-control full-width" placeholder="Enter a item name" />
+        <input id="createTitle" type="text" class="input-control full-width" placeholder="Enter a title" />
+        <input id="createButton" value="Create Item" type="button" class="btn btn-primary" />
+    </div>
+
+    <div class="col form-fields">
+        <label class="full-width">Rebuild Indexes</label>
+        <select id="rebuildIndexSelection" class="input-control full-width"> </select>
+        <input id="rebuildButton" type="button" value="Rebuild Index" class="btn btn-primary input-control" />
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div id="statusMessages">
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        try {
+            const response = await fetch("/api/management/indexes");
+
+                if (response.ok) {
+                    const result = await response.json(); // Parse as JSON
+                    const nodes = result.data?.indexes?.nodes || [];
+
+                    const select = document.getElementById("rebuildIndexSelection");
+
+                    const defaultOption = document.createElement("option");
+                        defaultOption.value = "";
+                        defaultOption.textContent = "-- Select an index --";
+                        select.appendChild(defaultOption);
+
+                    nodes.forEach(node => {
+                        const option = document.createElement("option");
+                        option.value = node.name;
+                        option.textContent = node.name;
+                        select.appendChild(option);
+                    });
+                }
+            } catch (err) {
+                console.error('Error:', err);
+            }
+        }
+    );
+
+    document.getElementById("updateButton").addEventListener("click", async (e) => {
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/progressHub")
+            .build();
+
+        const statusDiv = document.getElementById("statusMessages");
+        statusDiv.innerHTML = "";
+
+        handleClientUpdate(connection, statusDiv);
+
+        try {
+            await connection.start();
+            const nameTextBox = document.getElementById("updateName");
+            const nameTextBoxValue = nameTextBox.value;
+
+            const select = document.getElementById("updateFields");
+            const selectField = select.options[select.selectedIndex].value;
+
+            const valueTextBox = document.getElementById("updateValue");
+            const valueTextBoxValue = valueTextBox.value;
+
+            const response = await fetch("/home/UpdateItem", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    ItemName: nameTextBoxValue,
+                    FieldName: selectField,
+                    NewValue: valueTextBoxValue
+                }),
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+
+                const select = document.getElementById("updateFields");
+                select.innerHTML = "";
+                nameTextBox.value = "";
+                valueTextBox.value = "";
+            }
+        } catch (err) {
+            console.error('Error:', err);
+        }
+    });
+
+    document.getElementById("createButton").addEventListener("click", async (e) => {
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/progressHub")
+            .build();
+
+        const statusDiv = document.getElementById("statusMessages");
+        statusDiv.innerHTML = "";
+
+        handleClientUpdate(connection, statusDiv);
+
+        try {
+            await connection.start();
+            const nameTextBox = document.getElementById("createName");
+            const nameTextBoxValue = nameTextBox.value;
+
+            const titleTextBox = document.getElementById("createTitle");
+            const titleValue = titleTextBox.value;
+
+            const response = await fetch("/home/CreateItem", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    ItemName: nameTextBoxValue,
+                    Title: titleValue
+                }),
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+
+                createName.value = "";
+                createTitle.value = "";
+            }
+        } catch (err) {
+            console.error('Error:', err);
+        }
+    });
+
+    document.getElementById("rebuildButton").addEventListener("click", async (e) => {
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/progressHub")
+            .build();
+
+        const statusDiv = document.getElementById("statusMessages");
+        statusDiv.innerHTML = "";
+
+        handleClientUpdate(connection, statusDiv);
+
+        try {
+            await connection.start();
+            const select = document.getElementById("rebuildIndexSelection");
+            const selectValue = select.options[select.selectedIndex].value;
+
+            const response = await fetch("/home/RebuildIndex?indexName=" + selectValue, {
+                method: "POST"
+            });
+
+            if (response.ok) {
+                const result = await response.text();
+            }
+        } catch (err) {
+            console.error('Error:', err);
+        }
+    });
+
+    function handleClientUpdate(connection, statusDiv) {
+        connection.on("ClientUpdate", (message) => {
+            const wrapper = document.createElement("div");
+            wrapper.classList.add("wrapper");
+
+            const timestampElement = document.createElement("span");
+            timestampElement.classList.add("timestamp");
+            timestampElement.textContent = message.date;
+            wrapper.appendChild(timestampElement);
+
+            const logLevelElement = document.createElement("span");
+            logLevelElement.classList.add("loglevel", message.level);
+            logLevelElement.textContent = message.level;
+            wrapper.appendChild(logLevelElement);
+
+            const messageElement = document.createElement("span");
+            messageElement.classList.add("message", message.level);
+            messageElement.textContent = message.status;
+            wrapper.appendChild(messageElement);
+
+            statusDiv.appendChild(wrapper);
+            statusDiv.scrollTop = statusDiv.scrollHeight;
+        }
+    );
+}
+</script>

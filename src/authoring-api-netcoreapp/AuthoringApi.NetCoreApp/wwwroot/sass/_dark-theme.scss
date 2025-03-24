@@ -1,0 +1,19 @@
+@import "abstracts/";
+
+body {
+    background-color: $default-background;
+    color: $text-white;
+}
+
+.nav-link {
+    color: inherit;
+
+    &:hover {
+        color: inherit;
+        text-decoration: underline;
+    }
+}
+
+.border-bottom {
+    border-bottom: 1px solid $default-border-color !important;
+}

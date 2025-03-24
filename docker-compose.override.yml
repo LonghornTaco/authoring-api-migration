@@ -104,7 +104,7 @@ services:
         source: '\\.\pipe\docker_engine\'
         target: '\\.\pipe\docker_engine\'
     environment:
-      TERMINATION_MAP: cm,cd,id,rendering,webhook:traefik
+      TERMINATION_MAP: cm,cd,id,rendering,netcoreapp:traefik
     networks:
       - authoring-api-net
   rendering:
@@ -148,15 +148,15 @@ services:
       - "traefik.http.middlewares.rendering-headers.headers.accesscontrolallowmethods=GET,POST,OPTIONS"
       - "traefik.http.middlewares.rendering-headers.headers.accesscontrolalloworiginlist=https://${CM_HOST}"
       - "traefik.http.routers.rendering-secure.middlewares=rendering-headers"
-  webhook:
-    image: ${COMPOSE_PROJECT_NAME}-webhook:${VERSION:-latest}
-    container_name: ${COMPOSE_PROJECT_NAME}-webhook
+  netcoreapp:
+    image: ${COMPOSE_PROJECT_NAME}-netcoreapp:${VERSION:-latest}
+    container_name: ${COMPOSE_PROJECT_NAME}-netcoreapp
     build:
-      context: ./docker/build/webhook
+      context: ./docker/build/netcoreapp
       args:
         BASE_IMAGE: mcr.microsoft.com/dotnet/aspnet:7.0
     volumes:
-       - ${LOCAL_DEPLOY_PATH}\webhook\:C:\app\publish\
+       - ${LOCAL_DEPLOY_PATH}\netcoreapp\:C:\app\publish\
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: "http://*"
@@ -166,9 +166,9 @@ services:
     networks:
       authoring-api-net:
         aliases:
-          - ${WEBHOOK_HOST}
+          - ${NETCOREAPP_HOST}
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.webhook-secure.entrypoints=websecure"
-      - "traefik.http.routers.webhook-secure.rule=Host(`${WEBHOOK_HOST}`)"
-      - "traefik.http.routers.webhook-secure.tls=true"
+      - "traefik.http.routers.netcoreapp-secure.entrypoints=websecure"
+      - "traefik.http.routers.netcoreapp-secure.rule=Host(`${NETCOREAPP_HOST}`)"
+      - "traefik.http.routers.netcoreapp-secure.tls=true"

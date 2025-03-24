@@ -1,0 +1,26 @@
+@import "abstracts/";
+@import "inputs";
+@import "images";
+@import "status-console";
+@import "dark-theme";
+
+.table {
+    margin-top: 20px;
+    color: inherit;
+
+    a {
+        color: inherit;
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+.margin-left {
+    margin-left: 12px;
+}
+.margin-right {
+    margin-right: 12px;
+}
+.centered {
+    text-align: center;
+}

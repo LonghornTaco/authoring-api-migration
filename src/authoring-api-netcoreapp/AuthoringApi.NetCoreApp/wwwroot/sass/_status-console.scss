@@ -1,0 +1,46 @@
+@import "abstracts/";
+
+#statusMessages {
+    border: 1px solid $default-border-color;
+    height: 800px;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin-top: 24px;
+    background-color: #181818;
+    font-family: Consolas;
+
+    .wrapper {
+        font-size: 14px;
+
+        .timestamp {
+            color: #767875;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .loglevel {
+            color: #767875;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-transform: uppercase;
+        }
+
+        .message {
+            color: #9cbecb;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            &.errr {
+                color: #dd4659;
+            }
+
+            &.warn {
+                color: yellow;
+            }
+
+            &.dbug {
+                color: #02859a;
+            }
+        }
+    }
+}
